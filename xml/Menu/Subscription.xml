@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<menu>
+  <item>
+     <path>civicrm/subscription</path>
+     <title>CiviSubscription Dashboard</title>
+     <page_callback>CRM_Subscription_Page_DashBoard</page_callback>
+     <access_arguments>access CiviSubscription</access_arguments>
+     <page_type>1</page_type>
+     <weight>550</weight>
+     <component>CiviSubscription</component>
+  </item>
+  <item>
+     <path>civicrm/subscription/search</path>
+     <title>Find Subscriptions</title>
+     <page_callback>CRM_Subscription_Controller_Search</page_callback>
+     <access_arguments>access CiviSubscription</access_arguments>
+     <page_type>1</page_type>
+     <weight>560</weight>
+  </item>
+  <item>
+     <path>civicrm/contact/view/subscription</path>
+     <path_arguments>force=1,cid=%%cid%%</path_arguments>
+     <title>Subscriptions</title>
+     <page_callback>CRM_Subscription_Page_Tab</page_callback>
+     <access_arguments>access CiviSubscription</access_arguments>
+     <weight>570</weight>
+  </item>
+  <item>
+     <path>civicrm/subscription/add</path>
+     <path_arguments>action=add</path_arguments>
+     <title>New Subscription</title>
+     <page_callback>CRM_Subscription_Page_Tab</page_callback>
+     <access_arguments>access CiviSubscription</access_arguments>
+     <page_type>1</page_type>
+     <component>CiviSubscription</component>
+  </item>
+  <item>
+     <path>civicrm/subscription/payment</path>
+     <title>Subscription Payments</title>
+     <page_callback>CRM_Subscription_Page_Payment</page_callback>
+     <access_arguments>access CiviSubscription</access_arguments>
+     <weight>580</weight>
+  </item>
+  <item>
+    <path>civicrm/ajax/subscriptionAmount</path>
+    <page_callback>CRM_Subscription_Page_AJAX::getSubscriptionDefaults</page_callback>
+    <access_arguments>access CiviSubscription,administer CiviCRM</access_arguments>
+  </item>
+</menu>
